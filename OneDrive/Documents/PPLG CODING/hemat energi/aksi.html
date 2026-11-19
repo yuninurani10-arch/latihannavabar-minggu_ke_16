@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aksi & Rekomendasi Hemat Energi: 5 rekomendasi berdasarkan kuesioner 636 siswa kelas XI, tantangan 7 hari, SOP lab, dan kartu komitmen.">
+  <title>Aksi & Rekomendasi | Kampanye PPLG XI</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aksi.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVBAR
+       ========================================== -->
+  <header class="header" id="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            <path d="M13 10l-4 6h5l-1 5"/>
+          </svg>
+        </div>
+        <div class="logo-text">Hemat<span>Energi</span></div>
+      </a>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="tentang.html" class="nav-link">Tentang</a>
+        <a href="data.html" class="nav-link">Data & Fakta <span class="badge-phase">Fase 2</span></a>
+        <a href="aksi.html" class="nav-link active">Aksi <span class="badge-phase">Fase 3</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO: DARI NIAT KE KEBIASAAN
+         ========================================== -->
+    <section class="data-hero">
+      <div class="container">
+        <span class="section-tag">Saatnya Bertindak • Fase 3</span>
+        <h1 class="section-title">Niat sudah ada. <span style="color: var(--primary);">Sekarang jadikan kebiasaan.</span></h1>
+        <p class="section-description" style="max-width: 720px; margin: 0 auto;">
+          Hampir semua dari kita merasa sudah hemat energi. Tapi data menunjukkan, makin spesifik tindakannya —
+          apalagi yang melibatkan teman — makin sedikit yang benar-benar melakukannya.
+        </p>
+
+        <div class="gap-card" id="gap-card" aria-live="polite">
+          <!-- diisi js/aksi.js dari DATA_ENERGI -->
+        </div>
+
+        <div class="hero-actions" style="justify-content: center; margin-top: 28px;">
+          <a href="#rekomendasi" class="btn btn-primary">Lihat 5 Rekomendasi</a>
+          <a href="#tantangan" class="btn btn-outline">Ikut Tantangan 7 Hari</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TEMUAN: DI MANA KEBIASAAN BOLONG
+         ========================================== -->
+    <section class="section" id="temuan">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Dasar Data</span>
+          <h2 class="section-title">Di Mana Kebiasaan Kita Masih Bolong?</h2>
+          <p class="section-description">
+            Persentase siswa yang menjawab <strong>jarang / kadang</strong> (skor 1–2) pada tiap perilaku.
+            Makin panjang batang, makin besar peluang untuk berubah.
+          </p>
+        </div>
+
+        <div class="chart-card">
+          <div class="bars" id="bars" role="list"></div>
+          <p class="aksi-note">
+            Sumber: kuesioner perilaku hemat energi, <span data-meta="jumlah_responden">636</span> responden kelas XI
+            (<span data-meta="persen_partisipasi">99,4</span>% dari siswa terdata). Batang kuning = 5 perilaku yang jadi fokus rekomendasi.
+            Detail lengkap ada di halaman <a href="data.html" style="color: var(--primary-dark); font-weight: 600;">Data & Fakta</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5 REKOMENDASI
+         ========================================== -->
+    <section class="section habits-section" id="rekomendasi">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Rekomendasi</span>
+          <h2 class="section-title">5 Rekomendasi dari Data</h2>
+          <p class="section-description">
+            Disusun dari perilaku dengan persentase “jarang” tertinggi. Tiap rekomendasi punya langkah yang bisa dicoba <strong>hari ini juga</strong>.
+          </p>
+        </div>
+        <div class="rec-grid" id="rec-grid">
+          <noscript><p>Aktifkan JavaScript untuk melihat rekomendasi yang dihitung dari data.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SOP LAB KOMPUTER
+         ========================================== -->
+    <section class="section" id="sop-lab">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Khusus Lab & Bengkel</span>
+          <h2 class="section-title">SOP Singkat Hemat Listrik di Lab</h2>
+          <p class="section-description">
+            Butir P10 (memastikan peralatan mati sebelum pulang) dan P04 (membatasi gawai/laptop) paling dekat dengan keseharian lab.
+            Tiga tahap ini bisa ditempel di dinding lab.
+          </p>
+        </div>
+
+        <div class="insights-grid">
+          <div class="insight-card">
+            <div class="insight-icon">🟢</div>
+            <h3 class="insight-title">Sebelum Praktik</h3>
+            <ul class="sop-list">
+              <li>Nyalakan hanya komputer dan alat yang dipakai hari itu.</li>
+              <li>Buka tirai dan jendela; matikan lampu yang tidak perlu.</li>
+              <li>Atur AC secukupnya, tutup pintu dan jendela.</li>
+            </ul>
+          </div>
+          <div class="insight-card">
+            <div class="insight-icon">🟡</div>
+            <h3 class="insight-title">Saat Praktik</h3>
+            <ul class="sop-list">
+              <li>Aktifkan sleep / layar mati otomatis di setiap komputer.</li>
+              <li>Tutup aplikasi, tab, dan game yang tidak berkaitan dengan tugas.</li>
+              <li>Istirahat lebih dari beberapa menit? Matikan monitor.</li>
+            </ul>
+          </div>
+          <div class="insight-card">
+            <div class="insight-icon">🔴</div>
+            <h3 class="insight-title">Setelah Praktik</h3>
+            <ul class="sop-list">
+              <li>Shutdown komputer dengan benar, jangan hanya menutup layar.</li>
+              <li>Cabut charger, kabel, dan steker yang tidak terpakai.</li>
+              <li>Piket mengecek lampu, AC, kipas, dan proyektor sebelum mengunci lab.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TANTANGAN 7 HARI
+         ========================================== -->
+    <section class="section habits-section" id="tantangan">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tantangan</span>
+          <h2 class="section-title">Tantangan 7 Hari Hemat Energi</h2>
+          <p class="section-description">Satu misi kecil per hari. Centang kalau sudah dilakukan — progresmu tersimpan di browser ini saja.</p>
+        </div>
+
+        <div class="challenge-box">
+          <div class="ch-label"><span id="challenge-text">0 dari 7 misi selesai</span><span id="challenge-pct">0%</span></div>
+          <div class="ch-track" role="progressbar" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" id="challenge-bar">
+            <div class="ch-fill" id="challenge-fill"></div>
+          </div>
+
+          <ol class="challenge-list" id="challenge-list"></ol>
+          <button type="button" class="btn btn-outline" id="challenge-reset" style="margin-top: 20px; padding: 8px 20px; font-size: .85rem;">Ulangi dari awal</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         KARTU KOMITMEN
+         ========================================== -->
+    <section class="section" id="komitmen">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Komitmen</span>
+          <h2 class="section-title">Kartu Komitmen Hemat Energi</h2>
+          <p class="section-description">Pilih janji yang sanggup kamu tepati, lalu buat kartunya. Screenshot dan bagikan ke teman sekelas.</p>
+        </div>
+
+        <div class="pledge-layout">
+          <form id="pledge-form" class="pledge-form" autocomplete="off">
+            <label class="field">
+              <span>Nama panggilan <em>(boleh dikosongkan)</em></span>
+              <input type="text" id="pledge-name" class="search-input" style="width: 100%;" maxlength="30" placeholder="mis. Rani XI-2">
+            </label>
+            <fieldset>
+              <legend>Saya berjanji untuk…</legend>
+              <div id="pledge-options"></div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Buat Kartu Komitmen</button>
+            <p class="aksi-note">Nama dan pilihanmu tidak dikirim ke mana pun — hanya tampil di layar ini.</p>
+          </form>
+
+          <div class="pledge-card-wrap" aria-live="polite">
+            <div class="pledge-card" id="pledge-card" hidden>
+              <div class="pledge-badge">⚡ Komitmen Hemat Energi</div>
+              <p class="pledge-who" id="pledge-who"></p>
+              <ul id="pledge-list"></ul>
+              <p class="pledge-foot">#HematEnergiPPLG · <span id="pledge-date"></span></p>
+            </div>
+            <div class="pledge-empty" id="pledge-empty">Kartumu akan muncul di sini.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CATATAN JUJUR
+         ========================================== -->
+    <section class="section habits-section" id="catatan">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 24px;">
+          <span class="section-tag">Catatan</span>
+          <h2 class="section-title">Catatan Jujur tentang Data Ini</h2>
+        </div>
+        <ul class="honest-list">
+          <li>Ini <strong>jawaban kita sendiri</strong> lewat kuesioner, bukan pengukuran listrik sebenarnya. Orang cenderung menjawab lebih baik dari kenyataan, jadi angka sebenarnya bisa lebih rendah.</li>
+          <li>Rata-rata skor tinggi (<span data-ringkasan="rata_rata_skor">3,36</span> dari 4) bukan alasan berhenti — justru tanda bahwa tinggal selangkah lagi menuju kebiasaan yang konsisten.</li>
+          <li>Selisih antarjurusan kecil. Tujuannya bukan mencari siapa yang paling buruk, tetapi mengajak <strong>semua rombel</strong> naik bersama.</li>
+        </ul>
+
+        <div class="data-cta-fase3">
+          <h2>Matikan yang Tak Perlu, Selamatkan Bumi.</h2>
+          <p>Mulai dari satu saklar, satu charger, satu teguran ramah.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
+            <a href="data.html" class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,.6);">← Kembali ke Data & Fakta</a>
+            <a href="#tantangan" class="btn btn-accent">Mulai Tantangan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M13 10l-4 6h5l-1 5"/></svg>
+            </div>
+            <div class="logo-text">Hemat<span>Energi</span></div>
+          </div>
+          <p>
+            Media kampanye penghematan energi lingkungan sekolah. Proyek kolaboratif mata pelajaran KIK, PABP, dan Produktif PPLG.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <div class="footer-links">
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html">Tentang Kampanye</a>
+            <a href="data.html">Data & Fakta (Fase 2)</a>
+            <a href="aksi.html">Aksi (Fase 3)</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Penyelenggara</h4>
+          <div class="footer-links">
+            <span>Jessie Aulia Febiyantoro</span>
+            <span>Rasya Dwi Febrian</span>
+            <span>Yuni Nurani</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Proyek Kolaboratif PPLG XI. Kampanye Konservasi dan Penghematan Energi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data_perilaku_energi.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/aksi.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard Data & Fakta Perilaku Hemat Energi Siswa Kelas XI. Visualisasi hasil kuesioner dan observasi penggunaan energi di sekolah.">
+  <title>Data & Fakta Perilaku Energi | Kampanye PPLG XI</title>
+  
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVBAR
+       ========================================== -->
+  <header class="header" id="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            <path d="M13 10l-4 6h5l-1 5"/>
+          </svg>
+        </div>
+        <div class="logo-text">Hemat<span>Energi</span></div>
+      </a>
+
+      <!-- Hamburger Menu Button for Mobile -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Nav Menu Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="tentang.html" class="nav-link">Tentang</a>
+        <a href="data.html" class="nav-link active">Data & Fakta <span class="badge-phase">Fase 2</span></a>
+        <a href="aksi.html" class="nav-link">Aksi <span class="badge-phase">Fase 3</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION: DATA & FAKTA
+         ========================================== -->
+    <section class="data-hero">
+      <div class="container">
+        <span class="section-tag">Visualisasi Riset • Fase 2</span>
+        <h1 class="section-title">Data & Fakta Perilaku Hemat Energi</h1>
+        <p class="section-description" style="max-width: 720px; margin: 0 auto;">
+          Eksplorasi data hasil kuesioner komprehensif perilaku konservasi energi siswa kelas XI. Disajikan secara interaktif untuk memahami pola kebiasaan dan potensi perbaikan energi di sekolah.
+        </p>
+
+        <!-- Meta Pills Ribbon -->
+        <div class="meta-pills">
+          <div class="meta-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Responden: <strong>636 Siswa</strong>
+          </div>
+          <div class="meta-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Partisipasi: <strong>99.4% (636/639)</strong>
+          </div>
+          <div class="meta-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Instrumen: <strong>10 Butir Likert (1 - 4)</strong>
+          </div>
+          <div class="meta-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Periode: <strong>12 Okt – 05 Nov 2026</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MAIN CONTENT: DASHBOARD
+         ========================================== -->
+    <section class="section" style="padding-top: 50px;">
+      <div class="container">
+
+        <!-- KPI SUMMARY CARDS -->
+        <div class="kpi-grid">
+          <!-- KPI 1 -->
+          <div class="kpi-card">
+            <div class="kpi-icon">⭐</div>
+            <div class="kpi-content">
+              <div class="kpi-label">Rata-Rata Skor</div>
+              <div class="kpi-value">3.36 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">/ 4.00</span></div>
+              <div class="kpi-sub">Kategori: <strong style="color: var(--primary-dark);">Sangat Baik</strong> (Rentang 3.26–4.00)</div>
+            </div>
+          </div>
+
+          <!-- KPI 2 -->
+          <div class="kpi-card">
+            <div class="kpi-icon">📊👋</div>
+            <div class="kpi-content">
+              <div class="kpi-label">Rata-Rata Total</div>
+              <div class="kpi-value">33.62 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">/ 40.00</span></div>
+              <div class="kpi-sub">Akumulasi 10 butir pertanyaan</div>
+            </div>
+          </div>
+
+          <!-- KPI 3 -->
+          <div class="kpi-card">
+            <div class="kpi-icon">🌱</div>
+            <div class="kpi-content">
+              <div class="kpi-label">Perilaku Baik & Sangat Baik</div>
+              <div class="kpi-value">96.2%</div>
+              <div class="kpi-sub">612 dari 636 total siswa responden</div>
+            </div>
+          </div>
+
+          <!-- KPI 4 -->
+          <div class="kpi-card kpi-accent">
+            <div class="kpi-icon">⚡</div>
+            <div class="kpi-content">
+              <div class="kpi-label">Indeks Tindakan Positif</div>
+              <div class="kpi-value">90.79%</div>
+              <div class="kpi-sub">Frekuensi respon sering & sangat sering</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             INTERACTIVE TAB NAVIGATION
+             ========================================== -->
+        <div class="tabs-wrapper">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="tab-ringkasan">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+              Ringkasan & Sebaran
+            </button>
+            <button class="tab-btn" data-tab="tab-butir">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              Analisis 10 Butir (P01–P10)
+            </button>
+            <button class="tab-btn" data-tab="tab-jurusan">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Jurusan & Rombel
+            </button>
+            <button class="tab-btn" data-tab="tab-rayon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Rayon & Gaya Belajar
+            </button>
+          </div>
+
+          <!-- ==========================================
+               TAB PANE 1: RINGKASAN & SEBARAN
+               ========================================== -->
+          <div class="tab-pane active" id="tab-ringkasan">
+            <div class="charts-grid-2">
+              <!-- Chart 1: Kategori -->
+              <div class="chart-card">
+                <div class="chart-card-header">
+                  <h3 class="chart-card-title">Proporsi Kategori Perilaku</h3>
+                  <p class="chart-card-subtitle">Klasifikasi tingkat perilaku hemat energi siswa berdasarkan skor Likert</p>
+                </div>
+                <div class="chart-wrapper donut-wrap">
+                  <canvas id="chartKategori"></canvas>
+                </div>
+                <div style="margin-top: 16px; padding: 12px 16px; background: var(--bg-main); border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-muted);">
+                  💡 Sebanyak <strong>59.4% (378 siswa)</strong> berada pada kategori <em>Sangat Baik</em>, dan <strong>36.8% (234 siswa)</strong> berkategori <em>Baik</em>. Hanya 0.2% (1 siswa) dalam kategori Kurang.
+                </div>
+              </div>
+
+              <!-- Chart 2: Histogram Skor Total -->
+              <div class="chart-card">
+                <div class="chart-card-header">
+                  <h3 class="chart-card-title">Sebaran Skor Total Siswa (10 - 40)</h3>
+                  <p class="chart-card-subtitle">Frekuensi jumlah responden berdasarkan akumulasi 10 butir pertanyaan</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chartSebaranSkor"></canvas>
+                </div>
+                <div style="margin-top: 16px; padding: 12px 16px; background: var(--bg-main); border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-muted);">
+                  🎯 Puncak responden berada pada skor sempurna <strong>40 (86 siswa)</strong> dan skor <strong>30 (64 siswa)</strong>, menunjukkan tingkat komitmen penghematan energi yang sangat tinggi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================
+               TAB PANE 2: ANALISIS 10 BUTIR (P01 - P10)
+               ========================================== -->
+          <div class="tab-pane" id="tab-butir">
+            <!-- Chart Bar 10 Butir -->
+            <div class="chart-card full-width" style="margin-bottom: 24px;">
+              <div class="chart-card-header">
+                <h3 class="chart-card-title">Peringkat Rata-Rata Skor per Butir Pernyataan</h3>
+                <p class="chart-card-subtitle">Evaluasi skor rata-rata butir P01 hingga P10 (Skala 1.00 - 4.00)</p>
+              </div>
+              <div class="chart-wrapper tall">
+                <canvas id="chartPerButir"></canvas>
+              </div>
+            </div>
+
+            <!-- Chart Stacked Likert Breakdown -->
+            <div class="chart-card full-width" style="margin-bottom: 30px;">
+              <div class="chart-card-header">
+                <h3 class="chart-card-title">Komposisi Pilihan Skala Likert per Butir (100% Stacked)</h3>
+                <p class="chart-card-subtitle">Persentase jawaban responden: 1 (Sangat Jarang), 2 (Jarang), 3 (Sering), 4 (Selalu)</p>
+              </div>
+              <div class="chart-wrapper tall">
+                <canvas id="chartButirBreakdown"></canvas>
+              </div>
+            </div>
+
+            <!-- Interactive Butir Detail Explorer -->
+            <div class="section-header" style="margin: 30px auto 20px auto;">
+              <span class="section-tag">Eksplorasi Detail</span>
+              <h3 style="font-size: 1.5rem; font-weight: 700;">Telusuri Detail Pernyataan Kuesioner</h3>
+              <p class="section-description" style="font-size: 0.95rem;">
+                Klik butir pernyataan di sebelah kiri untuk melihat rincian teks kuesioner dan persentase respon siswa.
+              </p>
+            </div>
+
+            <div class="butir-explorer-grid">
+              <div class="butir-selector-list" id="butir-selector-list">
+                <!-- Diisi via JavaScript -->
+              </div>
+              <div class="butir-detail-card" id="butir-detail-card">
+                <!-- Diisi via JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================
+               TAB PANE 3: JURUSAN & ROMBEL
+               ========================================== -->
+          <div class="tab-pane" id="tab-jurusan">
+            <!-- Chart Jurusan -->
+            <div class="chart-card full-width" style="margin-bottom: 30px;">
+              <div class="chart-card-header">
+                <h3 class="chart-card-title">Perbandingan Rata-Rata Skor Antar Jurusan</h3>
+                <p class="chart-card-subtitle">Perbandingan rata-rata skor kuesioner pada 7 program keahlian kelas XI</p>
+              </div>
+              <div class="chart-wrapper tall">
+                <canvas id="chartJurusan"></canvas>
+              </div>
+            </div>
+
+            <!-- Interactive Table Rombel -->
+            <div class="table-card">
+              <div class="table-filter-bar">
+                <div>
+                  <h3 class="chart-card-title">Peringkat & Analisis 18 Rombel Belajar</h3>
+                  <span class="table-count-info" id="table-count-info">Menampilkan seluruh rombel</span>
+                </div>
+                <div class="filter-controls">
+                  <input type="text" class="search-input" id="search-rombel-input" placeholder="Cari rombel / jurusan...">
+                  <select class="filter-select" id="filter-jurusan-select">
+                    <option value="ALL">Semua Jurusan</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 70px;" class="text-center">#</th>
+                      <th>Rombel</th>
+                      <th>Jurusan</th>
+                      <th class="text-center">Responden</th>
+                      <th>Rata-Rata Skor</th>
+                      <th class="text-center">Total Skor</th>
+                      <th>Kategori</th>
+                    </tr>
+                  </thead>
+                  <tbody id="rombel-table-body">
+                    <!-- Diisi via JavaScript -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================
+               TAB PANE 4: RAYON & GAYA BELAJAR
+               ========================================== -->
+          <div class="tab-pane" id="tab-rayon">
+            <div class="charts-grid-2">
+              <!-- Chart Rayon -->
+              <div class="chart-card">
+                <div class="chart-card-header">
+                  <h3 class="chart-card-title">Perilaku Berdasarkan Rayon Domisili</h3>
+                  <p class="chart-card-subtitle">Rata-rata skor hemat energi siswa pada 7 rayon pembinaan</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chartRayon"></canvas>
+                </div>
+                <div style="margin-top: 16px; padding: 12px 16px; background: var(--bg-main); border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-muted);">
+                  📍 <strong>Rayon Tajur (3.41)</strong> dan <strong>Cicurug (3.38)</strong> menempati posisi rata-rata skor tertinggi, dengan konsistensi hemat energi yang merata di seluruh rayon (rentang 3.31 – 3.41).
+                </div>
+              </div>
+
+              <!-- Chart Gaya Belajar -->
+              <div class="chart-card">
+                <div class="chart-card-header">
+                  <h3 class="chart-card-title">Perilaku Berdasarkan Gaya Belajar</h3>
+                  <p class="chart-card-subtitle">Perbandingan rata-rata skor antara gaya belajar Visual, Auditori, dan Kinestetik</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chartGayaBelajar"></canvas>
+                </div>
+                <div style="margin-top: 16px; padding: 12px 16px; background: var(--bg-main); border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-muted);">
+                  🧠 Siswa dengan gaya belajar <strong>Kinestetik (3.40)</strong> dan <strong>Auditori (3.39)</strong> sedikit lebih unggul dalam aksi nyata fisik dibanding tipe <strong>Visual (3.32)</strong>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             SECTION: TEMUAN KUNCI & INSIGHTS
+             ========================================== -->
+        <div class="section-header" style="margin-top: 50px;">
+          <span class="section-tag">Sorotan Data</span>
+          <h2 class="section-title">Temuan Kunci & Analisis Perilaku</h2>
+          <p class="section-description">
+            Poin-poin penting dari kuesioner yang menjadi dasar perumusan rekomendasi aksi pada Fase 3.
+          </p>
+        </div>
+
+        <div class="insights-grid">
+          <!-- Card 1 -->
+          <div class="insight-card">
+            <div class="insight-icon">🏆</div>
+            <h3 class="insight-title">Kebiasaan Positif Tertinggi</h3>
+            <p class="insight-desc">
+              Butir <strong>P01 (3.51)</strong>, <strong>P02 (3.46)</strong>, dan <strong>P06 (3.45)</strong> mencatatkan skor tertinggi. Sebanyak <strong>98.6% siswa</strong> sadar pentingnya hemat energi sehari-hari dan <strong>92.0% selalu mencabut charger/steker</strong> setelah selesai digunakan.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="insight-card">
+            <div class="insight-icon">⚠️</div>
+            <h3 class="insight-title">Titik Kritis & Tantangan</h3>
+            <p class="insight-desc">
+              Dua butir dengan skor terendah adalah <strong>P04 (3.22)</strong> terkait pembatasan penggunaan laptop/gawai (13.7% jarang) serta <strong>P09 (3.22)</strong> terkait keberanian menegur teman (13.2% enggan mengingatkan). Ini menjadi fokus utama kampanye edukasi interaktif.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="insight-card">
+            <div class="insight-icon">💻</div>
+            <h3 class="insight-title">Dinamika Jurusan IT & Lab</h3>
+            <p class="insight-desc">
+              Jurusan <strong>PMN (3.51)</strong> dan <strong>HTL (3.46)</strong> mencatatkan skor teratas, sedangkan <strong>PPLG (3.24)</strong> memiliki tantangan tertinggi karena intensitas pemakaian laptop dan komputasi harian yang sangat tinggi, membuka peluang optimalisasi daya efisien.
+            </p>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             CTA TO FASE 3
+             ========================================== -->
+        <div class="data-cta-fase3">
+          <h2>Dari Data Menuju Aksi Nyata (Fase 3)</h2>
+          <p>
+            Data kuesioner telah membuktikan tingginya kesadaran kita. Langkah selanjutnya di Fase 3 adalah mengubah kesadaran menjadi aksi terukur melalui panduan komitmen warga sekolah, SOP efisiensi listrik lab, dan evaluasi berkala!
+          </p>
+          <a href="aksi.html" class="btn btn-accent">
+            Lihat Rencana Aksi (Fase 3)
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M13 10l-4 6h5l-1 5"/></svg>
+            </div>
+            <div class="logo-text">Hemat<span>Energi</span></div>
+          </div>
+          <p>
+            Media kampanye penghematan energi lingkungan sekolah. Proyek kolaboratif mata pelajaran KIK, PABP, dan Produktif PPLG.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <div class="footer-links">
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html">Tentang Kampanye</a>
+            <a href="data.html">Data & Fakta (Fase 2)</a>
+            <a href="aksi.html">Aksi (Fase 3)</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Penyelenggara</h4>
+          <div class="footer-links">
+             <span>Jessie Aulia Febiyantoro</span>
+            <span>Rasya Dwi Febrian</span>
+            <span>Yuni Nurani</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Proyek Kolaboratif PPLG XI. Kampanye Konservasi dan Penghematan Energi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODAL NOTICE (FASE 3 PLACEHOLDER)
+       ========================================== -->
+  <div class="modal-overlay" id="phase-modal">
+    <div class="modal-card">
+      <div class="modal-icon">🚀</div>
+      <h3 class="modal-title" id="modal-title">Fase 3: Aksi & Rekomendasi</h3>
+      <p class="modal-desc" id="modal-desc">
+        Fase 3 sedang dipersiapkan! Tahap ini akan berisi panduan SOP hemat energi lab komputer, komitmen aksi bersama seluruh warga sekolah, dan kalkulator penghematan listrik.
+      </p>
+      <button class="btn btn-primary" id="modal-close-btn">Saya Mengerti</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data_perilaku_energi.js"></script>
+  <script src="js/data-charts.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
